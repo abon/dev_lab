@@ -11,6 +11,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Home Page</h1>
+
     <Row>
       <Col md="7">
         {" "}
@@ -33,6 +34,7 @@ const IndexPage = () => (
                 ))}
               </div>
             )
+
           }}
         />
       </Col>
