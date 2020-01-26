@@ -1,57 +1,58 @@
-import React from "react"
-import { Row, Col } from "reactstrap"
-import { graphql, StaticQuery } from "gatsby"
-import Sidebar from "../components/Sidebar"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Post from "../components/Post"
+import React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { graphql, StaticQuery } from 'gatsby'
+import Post from '../components/Post'
+import PaginationLinks from '../components/PaginationLinks'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Home Page</h1>
+const IndexPage = () => {
+  const postsPerPage = 2
+  let numberOfPages
+  return (
+    <Layout pageTitle="CodeBlog">
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <StaticQuery
+        query={indexQuery}
+        render={data => {
+          numberOfPages = Math.ceil(
+            data.allMarkdownRemark.totalCount / postsPerPage
+          )
+          return (
+            <div>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Post
+                  key={node.id}
+                  title={node.frontmatter.title}
+                  slug={node.fields.slug}
+                  author={node.frontmatter.author}
+                  body={node.excerpt}
+                  date={node.frontmatter.date}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                  tags={node.frontmatter.tags}
+                />
+              ))}
+              <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
+            </div>
+          )
+        }}
+      />
+    </Layout>
+  )
+}
 
-    <Row>
-      <Col md="7">
-        {" "}
-        <StaticQuery
-          query={indexQuery}
-          render={data => {
-            return (
-              <div>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Post
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    date={node.frontmatter.date}
-                    path={node.frontmatter.path}
-                    body={node.excerpt}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    tags={node.frontmatter.tags}
-                  />
-                ))}
-              </div>
-            )
-          }}
-        />
-      </Col>
-      <Col md="4">
-        <Sidebar />
-      </Col>
-    </Row>
-  </Layout>
-)
-
-export const indexQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+const indexQuery = graphql`
+  query indexQuery {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 2
+    ) {
+      totalCount
       edges {
         node {
           id
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
             title
+            date(formatString: "MMM Do YYYY")
             author
             tags
             image {
@@ -61,7 +62,9 @@ export const indexQuery = graphql`
                 }
               }
             }
-            path
+          }
+          fields {
+            slug
           }
           excerpt
         }

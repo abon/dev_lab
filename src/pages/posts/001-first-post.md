@@ -1,12 +1,10 @@
 ---
-title: "First Post - Introduction"
-date: 2019-12-12  12:14:45
-author: "Samadov Abdullah"
-path: "/first-post"
-image: ../../images/code.jpg
+title: 'First Post - Introduction'
+date: 2018-12-01 07:00:00
+author: 'John Doe'
+image: ../../images/m-1.png
 tags:
-- code  
-- web design
+  - code
 ---
 
-Welcome to Dev Lab, I hope you will enjoy out content
+Welcome to Code Blog, I hope you enjoy the content, Welcome to Code Blog, I hope you enjoy the content, Welcome to Code Blog, I hope you enjoy the content, Welcome to Code Blog, I hope you enjoy the content, Welcome to Code Blog, I hope you enjoy the content.

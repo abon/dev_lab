@@ -1,12 +1,20 @@
 ---
-title: "Third Post - Introduction"
-date: 2019-12-12 12:14:45
-author: "Samadov Abdullah"
-path: "/third-post"
-image: ../../images/code.jpg
+title: 'Third Post - CSS'
+date: 2018-12-03 07:00:00
+author: 'John Doe'
+image: ../../images/m-3.png
 tags:
   - design
   - tutorial
 ---
 
-Today, we are gonna be learning about legendary CSS 3
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.
+Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys, Let dive into CSS guys.

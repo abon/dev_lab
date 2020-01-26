@@ -1,18 +1,83 @@
-import React from "react"
+import React from 'react'
 import {
   Card,
   CardTitle,
   CardBody,
+  CardText,
   Form,
   FormGroup,
   Input,
-  Button,
-} from "reactstrap"
-import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+} from 'reactstrap'
+import { graphql, StaticQuery, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => (
   <div>
+    {author && (
+      <Card>
+        <Img className="card-image-top" fluid={authorFluid} />
+        <CardBody>
+          <CardTitle className="text-center text-uppercase mb-3">
+            {author.name}
+          </CardTitle>
+          <CardText>{author.bio}</CardText>
+          <div className="author-social-links text-center">
+            <ul>
+              <li>
+                <a
+                  href={author.facebook}
+                  targe="_blank"
+                  rel="noopener noreferrer"
+                  className="facebook"
+                >
+                  <i className="fab fa-facebook-f fa-lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.twitter}
+                  targe="_blank"
+                  rel="noopener noreferrer"
+                  className="twitter"
+                >
+                  <i className="fab fa-twitter fa-lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.instagram}
+                  targe="_blank"
+                  rel="noopener noreferrer"
+                  className="instagram"
+                >
+                  <i className="fab fa-instagram fa-lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.google}
+                  targe="_blank"
+                  rel="noopener noreferrer"
+                  className="google"
+                >
+                  <i className="fab fa-google fa-lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.linkedin}
+                  targe="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin"
+                >
+                  <i className="fab fa-linkedin fa-lg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+    )}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
@@ -20,54 +85,60 @@ const Sidebar = () => (
         </CardTitle>
         <Form className="text-center">
           <FormGroup>
-            <Input type="email" name="email" placeholder="Your email..." />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Your email address.."
+            />
           </FormGroup>
-          <Button color="info" block>
-            Subscribe
-          </Button>
+          <button className="btn btn-primary btn-block text-uppercase">
+            Subscribe <span className="text-warning">FOR FREE</span>
+          </button>
         </Form>
       </CardBody>
     </Card>
     <Card>
-      <CardBody className="text-center ">
-        <CardTitle>Ads..</CardTitle>
+      <CardBody>
+        <CardTitle className="text-center text-uppercase">
+          Advertisement
+        </CardTitle>
         <img
-          src="https://via.placeholder.com/300x350"
-          alt=""
-          style={{ width: "100%" }}
+          src="https://via.placeholder.com/320x200"
+          alt="Advert"
+          style={{ width: '100%' }}
         />
       </CardBody>
     </Card>
     <Card>
       <CardBody>
-        <CardTitle className="text-center text--uppercase">
+        <CardTitle className="text-center text-uppercase mb-3">
           Recent Posts
         </CardTitle>
+        <StaticQuery
+          query={sidebarQuery}
+          render={data => (
+            <div>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Card key={node.id}>
+                  <Link to={node.fields.slug}>
+                    <Img
+                      className="card-image-top"
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
+                  </Link>
+                  <CardBody>
+                    <CardTitle>
+                      <Link to={node.fields.slug}>
+                        {node.frontmatter.title}
+                      </Link>
+                    </CardTitle>
+                  </CardBody>
+                </Card>
+              ))}
+            </div>
+          )}
+        />
       </CardBody>
-      <StaticQuery
-        query={sidebarQuery}
-        render={data => (
-          <div>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card className="mx-auto" key={node.id} style={{ width: "80%" }}>
-                <Link to={node.frontmatter.path}>
-                  <Img
-                    className="card-image-top"
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                  />
-                </Link>
-                <CardBody>
-                  <CardTitle>
-                    <Link to={node.frontmatter.path}>
-                      {node.frontmatter.title}
-                    </Link>
-                  </CardTitle>
-                </CardBody>
-              </Card>
-            ))}
-          </div>
-        )}
-      />
     </Card>
   </div>
 )
@@ -83,7 +154,6 @@ const sidebarQuery = graphql`
           id
           frontmatter {
             title
-            path
             image {
               childImageSharp {
                 fluid(maxWidth: 300) {
@@ -91,6 +161,9 @@ const sidebarQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            slug
           }
         }
       }
