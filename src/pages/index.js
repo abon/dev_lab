@@ -6,7 +6,7 @@ import Post from '../components/Post'
 import PaginationLinks from '../components/PaginationLinks'
 
 const IndexPage = () => {
-  const postsPerPage = 2
+  const postsPerPage = 5
   let numberOfPages
   return (
     <Layout pageTitle="CodeBlog">

@@ -1,83 +1,10 @@
 import React from 'react'
-import {
-  Card,
-  CardTitle,
-  CardBody,
-  CardText,
-  Form,
-  FormGroup,
-  Input,
-} from 'reactstrap'
+import { Card, CardTitle, CardBody, Form, FormGroup, Input } from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Sidebar = ({ author, authorFluid }) => (
+const Sidebar = () => (
   <div>
-    {author && (
-      <Card>
-        <Img className="card-image-top" fluid={authorFluid} />
-        <CardBody>
-          <CardTitle className="text-center text-uppercase mb-3">
-            {author.name}
-          </CardTitle>
-          <CardText>{author.bio}</CardText>
-          <div className="author-social-links text-center">
-            <ul>
-              <li>
-                <a
-                  href={author.facebook}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="facebook"
-                >
-                  <i className="fab fa-facebook-f fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={author.twitter}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="twitter"
-                >
-                  <i className="fab fa-twitter fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={author.instagram}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="instagram"
-                >
-                  <i className="fab fa-instagram fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={author.google}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="google"
-                >
-                  <i className="fab fa-google fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={author.linkedin}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="linkedin"
-                >
-                  <i className="fab fa-linkedin fa-lg" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </CardBody>
-      </Card>
-    )}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
@@ -91,8 +18,9 @@ const Sidebar = ({ author, authorFluid }) => (
               placeholder="Your email address.."
             />
           </FormGroup>
-          <button className="btn btn-primary btn-block text-uppercase">
-            Subscribe <span className="text-warning">FOR FREE</span>
+          <button className="btn btn-primary btn-block text-uppercase ">
+            Subscribe{' '}
+            <span className="text-warning font-weight-bold">FOR FREE</span>
           </button>
         </Form>
       </CardBody>

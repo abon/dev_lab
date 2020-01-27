@@ -1,7 +1,7 @@
 ---
 title: 'First Post - Introduction'
 date: 2018-12-01 07:00:00
-author: 'John Doe'
+author: 'Abdullah'
 image: ../../images/m-1.png
 tags:
   - code

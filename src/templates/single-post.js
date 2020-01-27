@@ -22,11 +22,7 @@ const SinglePost = ({ data, pageContext, location }) => {
   }
 
   return (
-    <Layout
-      pageTitle={post.title}
-      postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}
-    >
+    <Layout pageTitle={post.title}>
       <SEO
         author={post.author}
         title={post.title}

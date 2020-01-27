@@ -8,7 +8,7 @@ const Footer = () => (
       <ul className="social-links-list">
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/abdullah.samadov"
             target="_blank"
             rel="noopener noreferrer"
             className="facebook"
@@ -18,7 +18,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://www.twitter.com/iam_abon"
             target="_blank"
             rel="noopener noreferrer"
             className="twitter"
@@ -26,34 +26,25 @@ const Footer = () => (
             <i className="fab fa-twitter fa-2x" />
           </a>
         </li>
+
         <li>
           <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="instagram"
-          >
-            <i className="fab fa-instagram fa-2x" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="google"
-          >
-            <i className="fab fa-google fa-2x" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com"
+            href="https://www.linkedin.com/in/abon"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin"
           >
             <i className="fab fa-linkedin fa-2x" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.github.com/abon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github"
+          >
+            <i className="fab fa-github fa-2x" />
           </a>
         </li>
       </ul>
