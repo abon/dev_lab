@@ -6,4 +6,4 @@
 
 <h5> to be developed... </h5>
 
-[Follow us by visiting this link](https://devslab.tech "Developer Laboratory")
+[Follow us by visiting this link](https://www.devslab.tech "Developer Laboratory")
