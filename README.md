@@ -1,12 +1,9 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-Developer Laboratory
+  Developer Laboratory
 </h1>
 
 <h5> to be developed... </h5>
 
-##Link
-
-https://www.devslab.tech
-
+[Follow us by visiting this link](https://devslab.tech "Developer Laboratory")
