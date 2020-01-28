@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardTitle, CardBody, Form, FormGroup, Input } from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import ads from '../images/ads.jpg'
 
 const Sidebar = () => (
   <div>
@@ -27,14 +28,8 @@ const Sidebar = () => (
     </Card>
     <Card>
       <CardBody>
-        <CardTitle className="text-center text-uppercase">
-          Advertisement
-        </CardTitle>
-        <img
-          src="https://via.placeholder.com/320x200"
-          alt="Advert"
-          style={{ width: '100%' }}
-        />
+        <CardTitle className="text-center text-uppercase">Join us</CardTitle>
+        <img src={ads} alt="Advert" style={{ width: '100%' }} />
       </CardBody>
     </Card>
     <Card>
