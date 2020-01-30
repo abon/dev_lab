@@ -1,7 +1,7 @@
 const authors = [
   {
     name: 'Abdullah',
-    imageUrl: 'abdullah.jpg',
+    imageUrl: 'dlogo.png',
     bio:
       'John has been a front-end and UI designer fpr over 10 years, he is a brilliant artist',
     facebook: 'https://www.facebook.com/',
