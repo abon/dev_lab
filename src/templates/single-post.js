@@ -5,12 +5,10 @@ import SEO from '../components/seo'
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
-import authors from '../util/authors'
 import { DiscussionEmbed } from 'disqus-react'
 
 const SinglePost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
-  const author = authors.find(x => x.name === post.author)
 
   const baseUrl = 'https://gatsbytutorial.co.uk/'
 
